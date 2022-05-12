@@ -360,7 +360,7 @@
                 <p class="subscribe_header">Подпишитесь на рассылку</p>
                 <form name="subscribe_form" autocomplete="off" action="">
                     <label class="subscribe_lable">
-                        <input type="email" name="email" placeholder="E-mail">
+                        <input class="subscribe_input" type="email" name="email" placeholder="E-mail">
                     </label>
                     <button class="subscribe_button" type="submit">Подписаться
                         <svg width="24" height="24" class="send-icon">
@@ -381,15 +381,27 @@
                 </button>
                     <p class="callback">Оставьте свои данные, мы вам перезвоним</p>
                     <form name="modal_form" autocomplete="off" action="">
-                        <label class="modal_label" for="name">Имя</label>
-                        <input class="modal_input" type="text" id="name" name="name" placeholder="">
-
-                        <label class="modal_label" for="tel">Телефон</label>
-                        <input class="modal_input" type="tel" id="tel" name="tel" placeholder="">
-
-                        <label class="modal_label" for="email">Почта</label>
-                        <input class="modal_input" type="email" id="email" name="email" placeholder="">
-
+                        <div class="form_field">
+                            <label class="modal_label" for="name">Имя</label>
+                            <input class="modal_input" type="text" id="name" name="name" placeholder="">
+                            <svg class="icon" width="18" height="18">
+                                <use href="./images/icons.svg#person-black"></use>
+                            </svg>
+                        </div>                        
+                        <div class="form_field">
+                            <label class="modal_label" for="tel">Телефон</label>
+                            <input class="modal_input" type="tel" id="tel" name="tel" placeholder="">
+                            <svg class="icon" width="18" height="18">
+                                <use href="./images/icons.svg#phone-black"></use>
+                            </svg>
+                        </div>
+                        <div class="form_field">
+                            <label class="modal_label" for="email">Почта</label>
+                            <input class="modal_input" type="email" id="email" name="email" placeholder="">
+                            <svg class="icon" width="18" height="18">
+                                <use href="./images/icons.svg#email-black"></use>
+                            </svg>
+                        </div>
                         <label class="modal_label" for="comment">Комментарий</label>   
                         <textarea class="modal_input textarea" name="comment" id="comment" cols="" rows="" placeholder="Введите текст"></textarea>
                         
