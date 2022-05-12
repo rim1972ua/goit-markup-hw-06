@@ -548,12 +548,12 @@ address li + li {
 
 /* -------------------------modal---------------------------- */
 
-/* .is-hidden {
+.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
     scale: 50%;
- } */
+ }
 
 .backdrop {
     position: fixed;
@@ -585,9 +585,15 @@ address li + li {
     right: 8px;
     width: 30px;
     height: 30px;
+    background-color: var(--accent-white-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .button-close:hover > .close-icon {
+     fill: var(--accent-color);
  }
 
 .modal .callback {
@@ -651,20 +657,36 @@ address li + li {
 }
 
 .modal_checkbox {
-    margin: auto 8.38px 30px 52px;
-    /* appearance: none;
+    appearance: none;
     -moz-appearance: none;
-    -webkit-appearance: none; */
+    -webkit-appearance: none;
 }
 
 .modal_checkbox_label {
+    display: flex;
+    align-items: center;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.03em;
+    margin-bottom: 30px;
 }
 
 .modal_checkbox_label a {
     color: var(--accent-color);
+    margin-left: 3px;
+}
+
+.modal_checkbox_icon {
+    border: 3px solid var(--main-headers-color);
+    border-radius: 2px;
+    margin-left: 52px;
+    margin-right: 8.38px;
+    fill: var(--accent-white-color);
+}
+
+.modal_checkbox:checked ~ .modal_checkbox_icon {
+    border-color: transparent;
+    background-color: var(--accent-color);
 }
 
  .backdrop .subscribe_button {
